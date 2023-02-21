@@ -1,0 +1,49 @@
+
+main.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4b15      	ldr	r3, [pc, #84]	; (5c <main+0x5c>)
+   8:	6b1b      	ldr	r3, [r3, #48]	; 0x30
+   a:	4a14      	ldr	r2, [pc, #80]	; (5c <main+0x5c>)
+   c:	f043 0301 	orr.w	r3, r3, #1
+  10:	6313      	str	r3, [r2, #48]	; 0x30
+  12:	4b13      	ldr	r3, [pc, #76]	; (60 <main+0x60>)
+  14:	681b      	ldr	r3, [r3, #0]
+  16:	4a12      	ldr	r2, [pc, #72]	; (60 <main+0x60>)
+  18:	f443 7380 	orr.w	r3, r3, #256	; 0x100
+  1c:	6013      	str	r3, [r2, #0]
+  1e:	4b10      	ldr	r3, [pc, #64]	; (60 <main+0x60>)
+  20:	68db      	ldr	r3, [r3, #12]
+  22:	4a0f      	ldr	r2, [pc, #60]	; (60 <main+0x60>)
+  24:	f043 0304 	orr.w	r3, r3, #4
+  28:	60d3      	str	r3, [r2, #12]
+  2a:	4b0d      	ldr	r3, [pc, #52]	; (60 <main+0x60>)
+  2c:	691b      	ldr	r3, [r3, #16]
+  2e:	f003 0302 	and.w	r3, r3, #2
+  32:	607b      	str	r3, [r7, #4]
+  34:	687b      	ldr	r3, [r7, #4]
+  36:	2b00      	cmp	r3, #0
+  38:	d105      	bne.n	46 <main+0x46>
+  3a:	4b09      	ldr	r3, [pc, #36]	; (60 <main+0x60>)
+  3c:	699b      	ldr	r3, [r3, #24]
+  3e:	4a08      	ldr	r2, [pc, #32]	; (60 <main+0x60>)
+  40:	f443 1380 	orr.w	r3, r3, #1048576	; 0x100000
+  44:	6193      	str	r3, [r2, #24]
+  46:	687b      	ldr	r3, [r7, #4]
+  48:	2b00      	cmp	r3, #0
+  4a:	d0e8      	beq.n	1e <main+0x1e>
+  4c:	4b04      	ldr	r3, [pc, #16]	; (60 <main+0x60>)
+  4e:	699b      	ldr	r3, [r3, #24]
+  50:	4a03      	ldr	r2, [pc, #12]	; (60 <main+0x60>)
+  52:	f043 0310 	orr.w	r3, r3, #16
+  56:	6193      	str	r3, [r2, #24]
+  58:	e7e1      	b.n	1e <main+0x1e>
+  5a:	bf00      	nop
+  5c:	40023800 	.word	0x40023800
+  60:	40020000 	.word	0x40020000
